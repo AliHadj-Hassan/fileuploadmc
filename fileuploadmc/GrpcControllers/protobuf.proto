@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "fileuploadmc.GrpcServices";
+package greet;
+
+service Greeter {
+  rpc SayHello (FileRequest) returns (FileReply);
+
+}
+message FileRequest {
+  string name = 1;
+  bytes data = 2;
+} 
+
+
+message FileReply {
+  string message = 1;
+}
